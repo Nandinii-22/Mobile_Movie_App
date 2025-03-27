@@ -29,7 +29,7 @@ const Index = () => {
     useEffect(() => {
         const getMovies = async () => {
             try {
-                const response: Movie[] = await fetchMovies({ query: "Marvel" });
+                const response: Movie[] = await fetchMovies({ query: "" });
                 setMovies(response || []); // Ensure movies is always an array
             } catch (err) {
                 setError(err instanceof Error ? err : new Error("Unknown error"));
